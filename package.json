@@ -2,7 +2,8 @@
   "name": "com_academicpages",
   "version": "0.1.0",
   "contributors": [
-    "Andrew Waterman <awaterma@ecosur.mx"
+    "Andrew Waterman <awaterma@ecosur.mx>",
+    "Andrew Waterman <awaterma@awaterma.net>"
   ],
   
   "description": "Implementation of the academic pages project.",
