@@ -12,7 +12,7 @@ the form of a Single Page Application, driven by simple JSON dictionaries and Ha
 
 As a Joomla! component, the application is released under version 3 of the GPL. 
 
-Feel free to copy, distribute, modify and use according to that well-known license, whose
-texts is replicated in a local copy, LICENSE.txt.
+Feel free to copy, distribute, modify and use according to the license, whose text is replicated 
+in the local copy, LICENSE.txt.
 
 
