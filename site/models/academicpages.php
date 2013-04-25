@@ -20,7 +20,7 @@
 
         public function getId() {
             if (!isset($this->id)) {
-                /* Make sure where getting a clean int as id */
+                /* Make sure we are getting a clean int as id */
                 $jinput = JFactory::getApplication()->input;
                 $this->id = $jinput->getInt('id','332');
             }
