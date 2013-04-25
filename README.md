@@ -1,6 +1,6 @@
-Academic Pages (com_academicpages)
+Academic Pages
+
 ** A Joomla! component **
-awaterma@ecosur.mx, andrew.waterman@gmail.com
 
 Academic Pages is a project to provide more information on Academics, Tehcnicians and others 
 working at El Colegio de La Frontera Sur in San Cristóbal de Las Casas, Chiapas, Mexico. This
