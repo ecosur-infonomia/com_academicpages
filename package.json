@@ -1,0 +1,17 @@
+{
+  "name": "com_academicpages",
+  "version": "0.1.0",
+  "contributors": [
+    "Andrew Waterman <awaterma@ecosur.mx"
+  ],
+  
+  "description": "Implementation of the academic pages project.",
+  
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-qunit": "~0.2.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-compress": "~0.4.10",
+    "grunt-contrib-clean": "~0.4.0"
+  }
+}

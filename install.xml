@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+    <name>Academic Pages</name>
+    <creationDate>November 2012</creationDate>
+    <author>Andrew Waterman</author>
+    <authorEmail>awaterma@ecosur.mx</authorEmail>
+    <authorUrl>http://www.ecosur.mx</authorUrl>
+    <copyright>Copyright 2012 ECOSUR and Andrew Waterman</copyright>
+    <license>GPL v. 3</license>
+    <version>0.0.1</version>
+    <description>
+        An implementation of the Academic Pages project, for ECOSUR.
+        Provides a single-page application for navigating through a
+        researcher's details, projects, affiliations, etc..
+    </description>
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>academicpages.php</filename>
+        <filename>controller.php</filename>
+        <folder>css</folder>
+        <folder>img</folder>
+        <folder>js</folder>
+        <folder>models</folder>
+        <folder>languages</folder>
+        <folder>views</folder>
+    </files>
+    <administration>
+        <!-- Administration Menu Section -->
+        <!-- Basically Empty, there's nothing to Administer here -->
+        <menu>Páginas Académicos</menu>
+        <files folder="admin">
+            <!-- Admin Main File Copy Section -->
+            <filename>index.html</filename>
+            <filename>academicpages.php</filename>
+        </files>
+    </administration>
+</extension>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Páginas Académicos">
+        <message>Páginas Académicos por Investigadores</message>
+    </layout>
+    <fields name="request">
+        <fieldset name="request">
+            <field name="id" type="article" default="332" description="IDPersona" extension="com_academicpages"
+                   label="ID" required="true"/>
+        </fieldset>
+    </fields>
+    <fields name="params">
+        <fieldset name="basic" label="IDPersona">
+            <field name="show_description" type="list" description="JGLOBAL_SHOW_ARTICLE_DESCRIPTION"
+                   label="JGLOBAL_SHOW_ARTICLE_DESCRIPTION">
+                    <option value="332">JSHOW</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>
