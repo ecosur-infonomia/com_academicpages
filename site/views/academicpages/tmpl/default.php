@@ -353,6 +353,5 @@ $document->addScript('components/com_academicpages/js/academicpages.js');
         Model.Render(personnel.data, related, projects, students, courses, outsideCourses, educationContinua,
             publications);
     })();
-        var testData = <?php echo $this->datosPersonales;?>;
 </script>
 

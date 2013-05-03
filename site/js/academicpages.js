@@ -268,17 +268,17 @@ var Model = function () {
                     var masters = Filter(students.student, "ProgramaCorto", "Maestría");
                     var licens = Filter(students.student, "ProgramaCorto", "Licenciatura");
                     if (doctors.length > 0) {
-                        jQuery('#doctorados').tab('show');
+                        jQuery('#doctorados').tab("show");
                         RenderTemplate("#thesis-template","#content", {student: doctors});
                     } else if (masters.length > 0) {
-                        jQuery('#maestros').tab('show');
+                        jQuery('#maestros').tab("show");
                         RenderTemplate("#thesis-template","#content", {student: masters});
                     } else {
-                        jQuery('#lic').tab('show');
+                        jQuery('#lic').tab("show");
                         RenderTemplate("#thesis-template","#content", {student: licens});
                     }
                 } else if (publications.publication.length > 0) {
-                    jQuery('#todos').tab('show');
+                    jQuery('#todos').tab("show");
                     RenderTemplate("#publications-template","#content", publications);
                 } else if (courses.course.length > 0) {
                     jQuery('#cursos').tab("show");
@@ -286,8 +286,8 @@ var Model = function () {
                 } else if (outsideCourses.course.length > 0) {
                     jQuery('#otros').tab("show");
                     RenderTemplate("#outside-template","#content", outsideCourses);
-                } else if (educacionContinua.course.length > 0) {
-                    jQuery('#educacion').tab('show');
+                } else if (educationContinua.course.length > 0) {
+                    jQuery('#educacion').tab("show");
                     RenderTemplate("#education-template", "#content", educationContinua);
                 }
             }
