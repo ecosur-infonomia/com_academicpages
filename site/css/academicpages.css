@@ -54,3 +54,34 @@
     -moz-border-radius: 4px 0 4px 0;
     border-radius: 4px 0 4px 0;
 }
+
+
+/* Template overrides */
+/* Todo: move these to the Template . */
+#rel-div ul li a:hover, dd a:hover, dt a:hover {
+    color: #996633 !important;
+}
+
+/* Tab navigation */
+.nav-tabs>li>a:hover:not(:active) {
+    color: #996633 !important;
+}
+
+.dropdown-menu li>a:active, .dropdown-menu li>a:hover, .dropdown-menu li>a:active, .dropdown-submenu:hover>a
+{   
+    color: white !important;
+    background-color: #996633 !important;
+    background-image: none !important; 
+}
+
+a .caret {
+    border-top-color: #996633 !important;
+    border-bottom-color: #996633 !important;
+}
+
+li.active ul li.active a { 
+    background: none !important;
+    background-image: none !important;
+    background-color: #996633 !important;   
+    color: white;
+}
