@@ -57,9 +57,10 @@
                 $this->getRFC();
             }
             $bdi = $this->getBDIConnection();
-            $sql = "SELECT Fotografia, NombrePersonal, ApellidosPersonal, NombreAbreviado, NombreUnidad, NombreDepartamentoArea, NombreLineaSubArea, NombreCategoria, IDNivelSNI, Titulo,
-              IDNivelGrado, CarreraOEspecialidad, ExtensionTelefonica, Email, SintesisCurricular, AreasDeInteres, PaginaWebPersonal,
-              (CASE WHEN EXISTS (
+            $sql = "SELECT Fotografia, NombrePersonal, ApellidosPersonal, NombreAbreviado, NombreUnidad,
+              NombreDepartamentoArea, NombreLineaSubArea, NombreCategoria, IDNivelSNI, Titulo,
+              IDNivelGrado, CarreraOEspecialidad, ExtensionTelefonica, Email, SintesisCurricular,
+              AreasDeInteres, PaginaWebPersonal, IDPuesto, (CASE WHEN EXISTS (
                   SELECT NombreLineaSubArea FROM [01_LineasYSubAreasAsignadasAlPersonalAsociados]
                                                  laa INNER JOIN [01_LineasYSubAreas] ll ON laa.IDLineaSubArea = ll.IDLineaSubArea
                   WHERE laa.RFC = PERSONAL.RFC AND EsLaLineaActual = 1) THEN
@@ -81,7 +82,9 @@
                                                                 AND [01_NivelesEstudioYGradosObtenidos].EsElGradoConcluidoMasAlto = 1
               INNER JOIN [01_CategoriasAdministrativasObtenidas] as CAT on PERSONAL.RFC = CAT.RFC and CAT.EsLaCategoriaAdministrativaActual = 1
               INNER JOIN [01_ClasificacionesDeCategorias] as CLAS on CAT.IDCategoriaAdministrativa = CLAS.IDCategoria
-              LEFT OUTER JOIN [01_PermisosTomados] AS PT ON PT.RFC = PERSONAL.RFC AND PT.FechaInicio <= GETDATE() and PT.FECHATERMINO > GETDATE()
+              LEFT OUTER JOIN [01_PuestosLaboralesObtenidos] as PLO on PLO.RFC = PERSONAL.RFC AND PLO.EsUnPuestoActual=1
+              LEFT OUTER JOIN [01_PermisosTomados] AS PT ON PT.RFC = PERSONAL.RFC AND PT.FechaInicio <= GETDATE()
+                AND PT.FECHATERMINO > GETDATE()
               LEFT OUTER JOIN [01_ClasificacionesDePermisos] ON PT.TipoDePermiso = [01_ClasificacionesDePermisos].TipoPermiso
               LEFT OUTER JOIN [01_NivelesSNIObtenidos] as SNI on PERSONAL.RFC = SNI.RFC and SNI.EsElNivelSNIActual = 1
             WHERE PERSONAL.Estatus = 1

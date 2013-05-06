@@ -225,8 +225,15 @@ var Model = function () {
                     publications: publications});
                 BindTabControls (projects, students, courses, outsideCourses, educationContinua, publications);
 
-                /* Image -- Sabatical information is included in the "inactivo" field from our data query. */
-                RenderTemplate("#photo-template", "#photo", { imgURL:data[0].Fotografia, inactive:data[0].Permiso});
+                /* Image -- Sabatical information is included in the "inactivo" field from our data query. A
+                 * SPECIAL CASE is made to ensure that this does not include an absence for directing the institution
+                  * (with an IDPuesto == 8).*/
+
+                if (data[0].IDPuesto == 8) {
+                    RenderTemplate("#photo-template", "#photo", { imgURL:data[0].Fotografia, inactive:null});
+                } else {
+                    RenderTemplate("#photo-template", "#photo", { imgURL:data[0].Fotografia, inactive:data[0].Permiso});
+                }
 
                 /* Labor/Academic information  */
                 RenderTemplate("#datos-personales-template", "#datos-personales", {
