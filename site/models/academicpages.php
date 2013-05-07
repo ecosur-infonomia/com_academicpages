@@ -372,14 +372,28 @@
         /* Gets a connection to the BDI MSSQL Server database */
         private function getBDIConnection() {
             require 'dbconfig.php';
-            $resource = new PDO($bdi['url'], $bdi['user'], $bdi['password']);
+            $resource = null;
+            try {
+                $resource = new PDO($bdi['url'], $bdi['user'], $bdi['password']);
+            } catch(PDOException $e) {
+                error_log('BDI PDO Connection Exception!',0);
+                error_log($e->getMessage(), 0);
+                error_log($e->getTraceAsString(), 0);
+            }
             return $resource;
         }
 
         /* Gets a connection to the Posgrado MSSQL Server database */
         private function getPosgradoConnection() {
             require 'dbconfig.php';
-            $resource = new PDO($posgrado['url'], $posgrado['user'], $posgrado['password']);
+            $resource = null;
+            try {
+                $resource = new PDO($posgrado['url'], $posgrado['user'], $posgrado['password']);
+            } catch (PDOException $e) {
+                error_log('POSGRADO Connection Exception!', 0);
+                error_log($e->getMessage(), 0);
+                error_log($e->getTraceAsString(), 0);
+            }
             return $resource;
         }
     }
