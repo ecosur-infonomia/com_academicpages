@@ -115,7 +115,7 @@
                 $this->getRFC();
             }
             $bdi = $this->getBDIConnection();
-            $sql = "SELECT [02_Publicaciones].Cita, [02_Publicaciones].link, [02_Publicaciones].NombresDeLosAutores,
+            $sql = "SELECT [02_Publicaciones].Cita, [02_Publicaciones].NombresDeLosAutores,
                [02_ClasificacionGlobalDeProductos].DescripcionTipoProducto,
                YEAR([02_Publicaciones].FechaDePublicacion) as PubYear,
                MONTH([02_Publicaciones].FechaDePublicacion) as PubMonth,
