@@ -139,7 +139,7 @@ $document->addScript('components/com_academicpages/js/academicpages.js');
     {{#if project}}
     <table id="projects-table" class="table hidden-phone">
         <tr>
-            <th>Título</th><th>Financiado por</th><th>Nivel de Participacion</th><th>Estatus</th><th></th>
+            <th>Título</th><th>Financiado por</th><th>Nivel de Participación</th><th>Estatus</th><th></th>
         </tr>
         {{#each project}}
         {{is_active_row}}
