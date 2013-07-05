@@ -306,9 +306,8 @@
             }
             $bdi = $this->getBDIConnection();
             $sql = "SELECT Proyectos.ClaveProyecto, Proyectos.Titulo, Proyectos.ObjetivoGeneral, NombreContraparte, Proyectos.status as Estatus,
-                    Proyectos.Resumen, Proyectos.ImpactoEsperado, InstitucionesQueParticipan, PaginaWeb,
-                    Year(Proyectos.FechaInicio) as StartDate,
-                    Year(Proyectos.FechaTermino) as EndDate,
+                    Proyectos.Resumen, Proyectos.ImpactoEsperado, InstitucionesQueParticipan, PaginaWeb, NivelParticipacion,
+                    Year(Proyectos.FechaInicio) as StartDate, Year(Proyectos.FechaTermino) as EndDate,
                     Proyectos.FechaTermino from [01_Personal] as PERSONAL
                     INNER JOIN [04_PersonalPorProyecto] as PPP on PPP.claveparticipante = PERSONAL.RFC
                     INNER JOIN [04_Proyectos] AS PROYECTOS ON PROYECTOS.ClaveProyecto = PPP.ClaveProyecto

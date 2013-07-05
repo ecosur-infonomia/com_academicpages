@@ -7,7 +7,7 @@
     <authorUrl>http://www.ecosur.mx</authorUrl>
     <copyright>Copyright 2012 ECOSUR and Andrew Waterman</copyright>
     <license>GPL v. 3</license>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <description>
         An implementation of the Academic Pages project, for ECOSUR.
         Provides a single-page application for navigating through a
