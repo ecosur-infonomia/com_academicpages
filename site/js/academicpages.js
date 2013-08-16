@@ -310,10 +310,15 @@ var Model = function () {
          * @constructor
          */
         OnImgError : function (image) {
+            var serverString = 'http://' + document.location.hostname;
+
             /* Null out error handler (prevent loops) */
             image.onerror = null;
             /* Load place holder */
-            image.src = "components/com_academicpages/img/placeholder.png";
+            if (location.port != 80) {
+                serverString + ':' + location.port;
+            }
+            image.src = serverString + "/components/com_academicpages/img/placeholder.png";
         }
     };
 }();

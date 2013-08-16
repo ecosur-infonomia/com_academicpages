@@ -97,7 +97,7 @@ $document->addScript('components/com_academicpages/js/academicpages.js');
     <br>
     <h1>{{#if titulo}}{{titulo}}&nbsp;{{/if}}{{nombre}} {{apellidos}}</h1>
     <dl>
-        <dt><a href="<?php echo (JURI::base());?>?option=com_areasacademic&area={{deptId}}&Itemid=1487">{{dept}}</a></dt>
+        <dt><a href="<?php echo JRoute::_('index.php?option=com_areasacademic&area={{deptId}}&Itemid=1487')?>">{{dept}}</a></dt>
         <dd>Grupo: {{grupo}}</dd>
         {{#if asociados}}
         <dd>Grupos Asociados: {{asociados}}</dd>
@@ -131,7 +131,7 @@ $document->addScript('components/com_academicpages/js/academicpages.js');
 <script id="rel-template" type="text/x-handlebars-template">
     <ul>
         {{#each related}}
-        <li><a href="<?php echo (JURI::base());?>?option=com_academicpages&view=academicpages&id={{this.IDPersona}}&Itemid=1487"><i class="icon-user"></i>&nbsp;{{#if this.Titulo}}{{this.Titulo}}{{/if}}{{this.NombreAbreviado}}</a></li>
+        <li><a href="<?php echo JRoute::_('index.php?option=com_academicpages&id={{this.IDPersona}}')?>"><i class="icon-user"></i>&nbsp;{{#if this.Titulo}}{{this.Titulo}}{{/if}}{{this.NombreAbreviado}}</a></li>
         {{/each}}
     </ul>
 </script>

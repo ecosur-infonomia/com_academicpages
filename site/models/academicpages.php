@@ -371,6 +371,9 @@
         /* Gets a connection to the BDI MSSQL Server database */
         private function getBDIConnection() {
             require 'dbconfig.php';
+
+            if ($bdi == null) { throw new Exception ("Unable to get BDI connection!"); }
+
             $resource = null;
             try {
                 $resource = new PDO($bdi['url'], $bdi['user'], $bdi['password']);
@@ -385,6 +388,9 @@
         /* Gets a connection to the Posgrado MSSQL Server database */
         private function getPosgradoConnection() {
             require 'dbconfig.php';
+
+            if ($posgrado == null) { throw new Exception("Unable to get Posgrado Connection!"); }
+
             $resource = null;
             try {
                 $resource = new PDO($posgrado['url'], $posgrado['user'], $posgrado['password']);

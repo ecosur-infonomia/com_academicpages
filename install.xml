@@ -17,6 +17,7 @@
         <filename>index.html</filename>
         <filename>academicpages.php</filename>
         <filename>controller.php</filename>
+        <filename>router.php</filename>
         <folder>css</folder>
         <folder>img</folder>
         <folder>js</folder>
